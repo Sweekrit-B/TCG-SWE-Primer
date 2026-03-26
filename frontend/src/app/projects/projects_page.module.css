@@ -1,0 +1,82 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #ecfeff 100%);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 20;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.brand {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navButton {
+  padding: 0.42rem 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.navButton:hover {
+  background: #f8fafc;
+}
+
+.navButtonActive {
+  background: #e2e8f0;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  padding: 5.75rem 3.5rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .main {
+    padding: 5.5rem 1rem 1rem;
+  }
+}

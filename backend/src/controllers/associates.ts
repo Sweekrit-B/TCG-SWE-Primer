@@ -78,6 +78,16 @@ export const createAssociate = async (req: Request, res: Response) => {
     if (!userExists) {
         return res.status(400).json({ error: "Invalid associate ID" });
     }
+    // check if associate relationship already exists
+    const { data: existingAssociate, error: checkError } = await supabase
+        .from("associates")
+        .select("*")
+        .eq("project_id", project_id)
+        .eq("associate_id", associate_id)
+        .single();
+    if (!checkError && existingAssociate) {
+        return res.status(400).json({ error: "Associate already exists for this project" });
+    }
     const associateData = {
         ...(project_id !== undefined && { project_id }),
         ...(associate_id !== undefined && { associate_id }),

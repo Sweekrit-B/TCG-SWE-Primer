@@ -4,11 +4,11 @@ import * as projectsController from "../controllers/projects";
 
 const router = Router();
 
-// GET /projects/:id - Get project by ID
-router.get("/:id", projectsController.getProjectById);
-
 // GET /projects/all - Get all projects
 router.get("/all", projectsController.getAllProjects);
+
+// GET /projects/:id - Get project by ID
+router.get("/:id", projectsController.getProjectById);
 
 // POST /projects - Create a new project
 router.post("/", projectsController.createProject);
