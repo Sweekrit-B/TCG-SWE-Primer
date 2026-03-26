@@ -23,7 +23,7 @@ app.use(
 
 app.use(express.json());
 
-app.use("/user", userRoutes);\
+app.use("/user", userRoutes);
 app.use("/project", projectRoutes);
 app.use("/associates", associateRoutes);
 
