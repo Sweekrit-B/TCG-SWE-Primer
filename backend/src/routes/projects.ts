@@ -1,9 +1,21 @@
-
 import { Router } from "express";
 import * as projectsController from "../controllers/projects";
 
 const router = Router();
 
-// Check section 1-2 in the README for more details on how to create these routes.
+// GET all projects
+router.get("/", projectsController.getAllProjects);
+
+// GET project by id
+router.get("/:id", projectsController.getProjectById);
+
+// CREATE project
+router.post("/", projectsController.createProject);
+
+// UPDATE project
+router.put("/:id", projectsController.updateProject);
+
+// DELETE project
+router.delete("/:id", projectsController.deleteProject);
 
 export default router;
